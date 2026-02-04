@@ -6,5 +6,3 @@
 2026-01-30 09:22:55 ERROR Null pointer exception occurred
 2026-01-30 09:25:40 INFO Application shutdown initiated
 2026-01-30 09:27:01 ERROR Unable to write to log file
-
-app.log

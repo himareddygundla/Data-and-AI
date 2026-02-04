@@ -9,7 +9,7 @@ elif choice == 2:
 elif choice == 3:
     PRICE_PER_ITEM = 100   
 elif choice == 4:
-    PRICE_PER_ITEM = 250 
+    PRICE_PER_ITEM = 250  
 else:
     print("Invalid choice! Please select a valid option.")
     exit()
