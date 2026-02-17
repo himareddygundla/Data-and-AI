@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+
+<h2>Home</h2>
+<p><a href="/checkout">Go to Checkout</a></p>
+
+<h3>Add Item</h3>
+<form method="post" action="/add-item">
+    <input name="title" placeholder="Title">
+    <input name="description" placeholder="Description">
+    <input name="price" placeholder="Price">
+    <input name="stock" placeholder="Stock">
+    <input name="category" placeholder="Category">
+    <button>Add Item</button>
+</form>
+
+<h3>Items</h3>
+<ul>
+{% for item in items %}
+    <li>
+        <b>{{ item.title }}</b> - ₹{{ item.price }}
+        <form method="post" action="/add-cart">
+            <input type="hidden" name="item_id" value="{{ item.id }}">
+            <button>Add to cart</button>
+        </form>
+    </li>
+{% endfor %}
+</ul>
+
+</div>
+</body>
+</html>

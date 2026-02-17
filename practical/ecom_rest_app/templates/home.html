@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .box { border: 1px solid #ddd; padding: 12px; margin: 10px 0; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Home</h2>
+
+  <div class="box">
+    <a href="/upload">Upload Page</a> | <a href="/docs">API Docs</a> | <a href="/cart">View Cart (JSON)</a>
+  </div>
+
+  <div class="box">
+    <h3>Cart Summary</h3>
+    <p><b>Subtotal:</b> {{ cart.subtotal }}</p>
+    <p><b>Items:</b> {{ cart.items|length }}</p>
+  </div>
+
+  <div class="box">
+    <h3>Items</h3>
+    {% if items|length == 0 %}
+      <p>No items yet. Create using POST /items in Postman.</p>
+    {% else %}
+      <ul>
+        {% for it in items %}
+          <li>
+            <b>{{ it.title }}</b> — ₹{{ it.price }} — stock {{ it.stock }}
+            {% if it.category %} ({{ it.category }}) {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</body>
+</html>

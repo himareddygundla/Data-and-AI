@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+
+<h2>Checkout</h2>
+<ul>
+{% for item in cart %}
+    <li>{{ item.title }} - ₹{{ item.price }}</li>
+{% endfor %}
+</ul>
+<h3>Total: ₹{{ total }}</h3>
+
+<form method="post" action="/checkout">
+    <input name="name" placeholder="Name" required>
+    <input name="address" placeholder="Address" required>
+    <input name="payment_method" placeholder="Payment Method" required>
+    <button>Create Order</button>
+</form>
+
+</div>
+</body>
+</html>
