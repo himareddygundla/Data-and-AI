@@ -1,0 +1,42 @@
+body {
+  font-family: Arial;
+  padding: 30px;
+  background: #f5f6fa;
+}
+
+h1 {
+  color: #2f3640;
+}
+
+.form input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+}
+
+.update-btn {
+  background: orange;
+  color: white;
+}
